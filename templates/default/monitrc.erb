@@ -38,7 +38,7 @@ set mailserver <%= node["monit"]["mail"]["hostname"] %> port <%= node["monit"]["
 <% end -%>
   with timeout <%= node["monit"]["mail"]["timeout"] %> seconds
 <% if node["monit"]["mail"]["using_hostname"] -%>
-    using hostname <%= node["monit"]["mail"]["hostname"] %>
+    using hostname <%= node["monit"]["mail"]["using_hostname"] %>
 <% end -%>
 
 set mail-format {
